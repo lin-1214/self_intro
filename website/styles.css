@@ -46,6 +46,22 @@ img.facebook {
   left: 365px;
 }
 
+div.dog {
+  width: 90px;
+  height: 80px;
+  position: fixed;
+  top: 15px;
+  left: 275px;
+  background: transparent url("./src/Dog.png") 0 0 no-repeat;
+  animation: doggy 1s steps(4) infinite;
+}
+
+@keyframes doggy {
+  100% {
+    background-position: -360px 0;
+  }
+}
+
 * {
   background-color: rgba(246, 245, 198, 0.8);
 }
