@@ -1,4 +1,7 @@
 div.title {
+  margin: 20px;
+  border-bottom-style: double;
+  border-bottom-width: 5px;
 }
 
 h1.title {
@@ -8,9 +11,19 @@ div.outer {
   margin: 20px 20px 60px 60px;
   padding-left: 240px;
   position: fixed;
-  top: 125px;
+  top: 70px;
+}
+
+div.audio {
+  position: fixed;
+  top: 20px;
+  left: 960px;
 }
 
 img.selfPic {
-  margin: 20px;
+  margin-left: 20px;
+}
+
+a:hover {
+  color: red;
 }
