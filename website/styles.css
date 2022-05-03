@@ -4,14 +4,12 @@ div.title {
   border-bottom-width: 5px;
 }
 
-h1.title {
-}
-
 div.outer {
-  margin: 20px 20px 60px 60px;
-  padding-left: 240px;
+  margin-top: 20px;
+  margin-bottom: 20px;
   position: fixed;
   top: 70px;
+  left: 290px;
 }
 
 div.audio {
@@ -22,8 +20,32 @@ div.audio {
 
 img.selfPic {
   margin-left: 20px;
+  position: fixed;
+  top: 120px;
 }
 
 a:hover {
   color: red;
+}
+
+div.clock {
+  position: fixed;
+  top: 480px;
+  left: 1050px;
+}
+
+img.instagram {
+  position: fixed;
+  top: 455px;
+  left: 310px;
+}
+
+img.facebook {
+  position: fixed;
+  top: 445px;
+  left: 365px;
+}
+
+* {
+  background-color: rgba(246, 245, 198, 0.8);
 }

@@ -1,41 +1,102 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>林咏毅的個人網站</title>
+    <title>Welcome to my webpage!</title>
     <link rel="icon" href="./src/settings.png" type="image/pin_icon" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <script src="./scripts.js"></script>
     <div class="title">
-      <h1 class="title">林咏毅的個人網站</h1>
+      <h1 class="title">YungYi's website</h1>
     </div>
     <div class="audio">
       <audio class="music" src="./src/bgm.mp3" controls></audio>
     </div>
-    <img class="selfPic" src="./src/self_pic.jpg" width="240" height="380" />
+    <img class="selfPic" src="./src/self_pic.jpg" width="240" height="357" />
     <div class="outer">
+      <h3>Self Intro</h3>
       <p>
-        大家好，我的名字是林咏毅，畢業於
-        <a href="https://tcfsh.tc.edu.tw/">台中一中</a>
-        目前就讀
-        <a href="https://web.ee.ntu.edu.tw/">台灣大學電機工程學系一年級</a>
+        Hello everyone! My name is Yung-Yi,Lin, a student graduated from
+        <a href="https://tcfsh.tc.edu.tw/">Taichung First Senior Highschool</a>
+        and now I'm a freshman in National Taiwan University, majored in
+        <a href="https://web.ee.ntu.edu.tw/">Electrical Engineering</a>
       </p>
-      <h3>興趣們</h3>
+      <p>
+        Since Electrical Engineering is a department which is famous for its
+        heavy workload, I usually spend my holiday on studying. Due to the
+        tedious time for absorbing lots of difficult concepts, instead of
+        studying in dorm, I like to go to library or cafe during my study time.
+      </p>
+      <p>
+        In my free time, I like to play basketball and go to gym to make myself
+        fit. I think of myself as an easy-going person, so I also enjoy the time
+        spent with my friend. Recently, I want to try some other kinds of
+        outdoor acticity, and make each day counts!
+      </p>
+      <h3>My Hobbies!</h3>
       <ul>
         <li>
           <a href="https://www.facebook.com/profile.php?id=100016199495800">
-            打籃球
+            Play basketball
           </a>
         </li>
         <li>
-          <a href="https://ntupesc.ntu.edu.tw/facilities/"> 健身 </a>
+          <a href="https://ntupesc.ntu.edu.tw/facilities/"> Workout </a>
         </li>
         <li>
-          <a href="https://www.instagram.com/_lin.1214/"> 滑IG </a>
+          <a
+            href="https://www.goodreads.com/book/show/44779750-computer-science"
+          >
+            Reading
+          </a>
         </li>
       </ul>
-      <p>Date/Time : <span class="datetime"></span></p>
+      <h3>DM Me:</h3>
+      <a href="https://www.instagram.com/_lin.1214/">
+        <img class="instagram" src="./src/ins.jpg" height="55" width="55" />
+      </a>
+      <a href="https://www.facebook.com/profile.php?id=100005903082383">
+        <img class="facebook" src="./src/fb.png" height="75" width="75" />
+      </a>
+      <div class="clock">
+        <p>Date / Time: <span class="time"></span></p>
+      </div>
+      <script>
+        var time = document.querySelector(".time");
+
+        function updateClock() {
+          // Get the current time, day , month and year
+          var now = new Date();
+          var hours = now.getHours();
+          var minutes = now.getMinutes();
+          var seconds = now.getSeconds();
+          var date = now.getDate();
+          var month = now.getMonth();
+          var year = now.getFullYear();
+
+          // format date and time
+          hours = hours % 12 || 12;
+          minutes = minutes < 10 ? "0" + minutes : minutes;
+          seconds = seconds < 10 ? "0" + seconds : seconds;
+          date = date < 10 ? "0" + date : date;
+
+          // display date and time
+          time.innerHTML =
+            month +
+            "-" +
+            date +
+            "-" +
+            year +
+            " " +
+            hours +
+            ":" +
+            minutes +
+            ":" +
+            seconds;
+        }
+        updateClock();
+        setInterval(updateClock, 1000);
+      </script>
     </div>
   </body>
 </html>
